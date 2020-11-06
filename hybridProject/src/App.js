@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, View, Button, Text} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as countActions from './src/actions/counts';
+import * as countActions from './actions/counts';
 
 class App extends Component {
   decrementCount() {
@@ -19,8 +19,6 @@ class App extends Component {
     const {count} = this.props;
     return (
       <View styles={styles.container}>
-        <Button title="increment" onPress={() => this.incrementCount()} />
-        <Button title="increment" onPress={() => this.incrementCount()} />
         <Button title="increment" onPress={() => this.incrementCount()} />
         <Text style={styles.textCenter}>{count}</Text>
         <Button title="decrement" onPress={() => this.decrementCount()} />
