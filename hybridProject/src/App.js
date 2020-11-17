@@ -19,9 +19,17 @@ class App extends Component {
     const {count} = this.props;
     return (
       <View styles={styles.container}>
-        <Button title="increment" onPress={() => this.incrementCount()} />
+        <Button
+          testID={'increment'}
+          title="increment"
+          onPress={() => this.incrementCount()}
+        />
         <Text style={styles.textCenter}>{count}</Text>
-        <Button title="decrement" onPress={() => this.decrementCount()} />
+        <Button
+          testID={'decrement'}
+          title="decrement"
+          onPress={() => this.decrementCount()}
+        />
       </View>
     );
   }
